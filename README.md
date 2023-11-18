@@ -1,0 +1,2 @@
+# Givester
+Mcgill hackathon project
