@@ -5,5 +5,45 @@ Home
 {% endblock %}
 
 {% block content %}
-<div class="container-lg">100% wide until large breakpoint</div>
+<header>
+  <div class= 'intro'>
+      {% load static %}
+      <img class = 'img.fluid w-100' src="{% static 'images/Main_vol.png' %}" alt="My image">
+      <div class = 'head'>
+              <h1>It is not enough to be compassionate you must act </h1>
+              <h6> Dalai Lama </h6>
+              <p> Volunteering <p>
+              <hr class = "w-25">
+      </div>
+  </div>
+</header>
+
+
+<section class = 'mission-statement'>
+  <h2>Mission Statement</h2>
+  <p>Our mission is to [Mission Statement of the Organization].</p>
+  <p>We strive to [Core Goal 1], [Core Goal 2], and [Core Goal 3] in order to [Purpose or Vision].</p>
+</section>
+<hr>
+
+<section class = 'featured container my-5'>
+  <div class ="row">
+    <div class = 'one col-lg-4 col-md-6 col-12'>
+      {% load static %}
+      <img class = 'img-fluid' src="{% static 'images/Main_vol.png' %}" alt="My image">
+      <div class = "text -75 h-50">
+        <p> Title</p>
+        <h4> description blah blah blah</h4>
+        <a href = '/events/view'> Read More </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer> 
+  <p1>
+    jotapfdmaksdf
+  <p1>
+</footer>
 {% endblock %}

@@ -1,0 +1,85 @@
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+ }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header .intro{
+    position: relative;
+}
+
+header .intro .head{
+    position: absolute;
+    top: 12%;
+    Left: 50%;
+    transform: translate(-50%,50%);
+}
+
+header .intro .head h1{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    font-size: 3.5vw;
+    color: #000000;
+     
+}
+
+header .intro .head h6{
+    color: #1e643c;
+    letter-spacing: 0.3;
+
+}
+
+header .intro .head p:after{
+    position: absolute;
+    top:0;
+    Left: 0;
+    width: 5rem;
+    height: 2rem;
+    background: #27ae60;
+
+}
+
+.mission-statement {
+    background-color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.mission-statement h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.mission-statement p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.featured .row .one{
+    height: 300px;
+}
+
+.featured .row .one img{
+    height: 100%;  
+    width: 100%;
+    background-size: cover;
+    box-sizing: border-box;  
+    object-fit: cover;
+}
+
+.featured .row .one .text{
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 150;
+
+}
