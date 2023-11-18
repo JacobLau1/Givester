@@ -1,9 +1,80 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Home
+About Us
 {% endblock %}
 
 {% block content %}
-<h1>This is the about page</h1>
+<style>
+  /* Your existing styles here */
+
+  /* Additional styles for the About page */
+  .about-section {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .about-section h2 {
+    color: #333;
+  }
+
+  .team-member {
+    margin-top: 30px;
+  }
+
+  /* Footer styles (if not included in the base.html file) */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+
+<header>
+  <!-- Your existing header content here -->
+</header>
+
+<section class="mission-statement">
+ 
+    <h1>Who We Are</h1>
+    <p>Welcome to Givester!
+        Here at Givester we aim to create a safe environment to encourage more people to engage in volunteering activities to benefit the greater good.</p>
+  
+    <h2>Mission Statement</h2>
+    <p>Our mission is to empower individuals to drive positive change through volunteerism. We embrace the transformative influence of collective effort, uniting passionate volunteers with impactful opportunities. Our goal is to strengthen communities, nurture compassion, and address social challenges. Committed to fostering a culture of service, we believe that every act of kindness, no matter its scale, contributes to a more compassionate and equitable world. Together, we can forge enduring impact, one volunteer opportunity at a time.</p>
+   
+  </section>
+  <hr>
+  
+
+<section class="team-section">
+  <div class="container">
+    <h2>Our Team</h2>
+
+    <div class="row">
+      <div class="col-md-4 team-member">
+        {% load static %}
+        <img class = 'img-fluid' src="{% static 'images/avatar.jpeg' %}" alt="My image" style="width: 200px;">
+        <h4>Jacob Lau</h4>
+        <p>Lead front-end developper</p>
+      </div>
+
+      <div class="col-md-4 team-member">
+        {% load static %}
+        <img class = 'img-fluid' src="{% static 'images/avatar.jpeg' %}" alt="My image" style="width: 200px;">
+        <h4>Jeffrey Lim</h4>
+        <p>Lead back-end developper</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2023 Givester | Designed by Jacob and Jeffrey</p>
+</footer>
+
 {% endblock %}
