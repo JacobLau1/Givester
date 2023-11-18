@@ -48,65 +48,30 @@ Events
 
     <table>
         <tr>
-           
         </tr>
-        <tr>
-            <td>
-                <h3>Feed the homeless</h3>
-                <p>Volunteer to make a meaningful impact by participating in a "Feed the Homeless" initiative, where you'll contribute to providing warm meals and essential nourishment to individuals experiencing homelessness, fostering a sense of community and support. Your involvement not only addresses immediate nutritional needs but also brings hope and dignity to those facing challenging circumstances. </p>
-                <p>Date: November 1, 2023</p>
-                <p class="address">Address: 123 street, QC Montreal</p>
-                <button type="button">
-                    <a class="nav-link" href="/events/apply?id=homeless">Apply</a>
-                </button>
-            </td>
-        </tr>
-      
-      
-    
-        <tr>
-            <td>
-                <h3>Be a caregiver for the elderly</h3>
-                <p>Join the fulfilling role of a caregiver for the elderly, offering companionship and assistance to seniors in need. Your compassionate efforts will enhance their quality of life, providing both physical and emotional support as you build meaningful connections within the community. Being a caregiver is an opportunity to create lasting bonds, bringing joy and comfort to those who may feel isolated.<p>Date: November 5, 2023</p>
-                <p class="address">Address: 123 street, QC Montreal</p>
-                <button type="button">
-                    <a class="nav-link" href="/events/apply">Apply</a>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h3>Plant trees</h3>
-                <p>Contribute to environmental sustainability by participating in a tree-planting event. As a volunteer, you'll play a vital role in improving air quality, conserving natural habitats, and fostering a greener future for generations to come through the simple yet impactful act of planting trees. This hands-on experience allows you to connect with nature and be part of a positive ecological change.<p>Date: November 10, 2023</p>
-                <p class="address">Address: 123 street, QC Montreal</p>
-                <button type="button">
-                    <a class="nav-link" href="/events/apply">Apply</a>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h3>Wash some dishes</h3>
-                <p>Support local community centers or shelters by volunteering to wash dishes, a task often overlooked but crucial for maintaining cleanliness and hygiene. Your efforts will directly contribute to the smooth operation of facilities that serve those in need. By taking on this essential role, you contribute to creating a welcoming and sanitary environment for individuals seeking assistance.<p>Date: November 15, 2023</p>
-                <p class="address">Address: 123 street, QC Montreal</p>
-                <button type="button">
-                    <a class="nav-link" href="/events/apply">Apply</a>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h3>Rake some leaves</h3>
-                <p>Embrace the outdoors and lend a helping hand by volunteering to rake leaves in parks or public spaces. This simple yet essential task not only beautifies the environment but also ensures safety and accessibility for the community, fostering a cleaner and more enjoyable outdoor space. Your contribution goes beyond aesthetics, positively impacting the well-being of the community and promoting a sense of shared responsibility for public spaces.<p>Date: November 20, 2023</p>
-                <p class="address">Address: 123 street, QC Montreal</p>
-                <button type="button">
-                    <a class="nav-link" href="/events/apply">Apply</a>
-                </button>
-            </td>
-        </tr>
-    </table>
+        {% for element in event %}
 
-</div>
+        <tr>
+            <td>
+                <h3>{{ element.title }}</h3>
+                <p>{{ element.description }} </p>
+                <p>{{ element.date }}</p>
+                <p class="address">{{ element.address }}</p>
+                
+                
+
+             
+                <button type="button">
+                    <a class="nav-link" href="/events/apply/{{ element.id }}">Apply</a>
+                </button>
+
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+    
 
 
 {% endblock %}
