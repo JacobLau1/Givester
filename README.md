@@ -1,6 +1,7 @@
 # Givester
-**Mcgill CodeJam 13** - Hackathon project
+**Mcgill CodeJam 13** - First Hackathon Project
 by Jeffrey Lim and Jacob Lau
+
 
 ### Inspiration
 In light of recent events and the rise of cost of living, volunteer work is now more important than ever.
