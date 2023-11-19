@@ -58,6 +58,7 @@ Events
         <tr>
         </tr>
         {% for element in event %}
+        {% if date <= element.date %}
 
         <tr>
             <td>
@@ -72,7 +73,9 @@ Events
 
             </td>
         </tr>
-
+        {% else %}
+        {% endif %}
+        
         {% endfor %}
 
     </table>
