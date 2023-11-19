@@ -44,6 +44,12 @@
                 resize: vertical; /* Allow vertical resizing */
                 min-height: 80px; /* Adjust as needed */
             }
+            .comments-box::placeholder {
+                color: #CCCCCC;
+            }
+            .email-box::placeholder {
+                color: #CCCCCC;
+            }
         </style>
 <br>
         <h1>Email Form</h1>
@@ -56,12 +62,12 @@
 <br>
             <label for="email">Please enter a valid email address:</label>
             <br>
-            <input type="email" id="email" name="email" required style="width: 100%; box-sizing: border-box; padding: 8px;">
+            <input type="email" class="email-box" id="email" name="email" required style="width: 100%; box-sizing: border-box; padding: 8px;" placeholder="someone@gmail.com">
 
             <!-- Added comments section -->
             <div class="comments-section">
-                <label for="comments">Any comments?</label>
-                <textarea id="comments" name="comments" class="comments-box" placeholder="Write your comments here..."></textarea>
+                <label for="comments">Any questions or concerns?</label>
+                <textarea id="comments" name="comments" class="comments-box" placeholder="Write your questions here..."></textarea>
             </div>
 <br>
             <button type="submit">Confirm</button>
