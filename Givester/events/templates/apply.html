@@ -37,11 +37,12 @@ footer {
 <h1>Email Form</h1>
 <br>
 
-<form action="/subscribe" method="post">
+<form action="/events/view/" method="post" onsubmit="submitForm()">
+    {% csrf_token %}
     <br>
-    <h3>You are applying to volunteer for:   </h3>
+    <h3>You are applying to volunteer for:  {{event.title}} </h3>
 <br>
-<h2> {{event.title}}</h2>
+<h2> {{event.date}}</h2>
     <br>
     <label>Please enter a valid email address:</label>
     <br>
