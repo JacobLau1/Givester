@@ -1,68 +1,74 @@
 {% extends 'base.html' %}
 
-
 {% block title %}
-Apply
+    Apply
 {% endblock %}
 
 {% block content %}
+    <div class="container-lg">
+        <style>
+            form {
+                background-color: #ccffdd;
+                padding: 20px;
+                max-width: 600px;
+                margin: 0 auto;
+            }
 
+            button {
+                padding: 12px 20px;
+                font-size: 16px;
+                background-color: #ffffff;
+                border-radius: 18px;
+                margin-top: 20px;
+            }
 
+            footer {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+                margin-top: 20px;
+            }
 
-<div class="container-lg">
-<style>
-form {
-  
-    background-color: #ccffdd;
-    padding: 12px 20px; 
-}
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-  }
-  button {
-    padding: 12px 20px; 
-    font-size: 16px;
-    background-color: #ffffff;
-    border-radius: 18px;
-}
+            /* Added styles for the comments section */
+            .comments-section {
+                margin-top: 20px;
+            }
 
-</style>
-
+            .comments-box {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                resize: vertical; /* Allow vertical resizing */
+                min-height: 80px; /* Adjust as needed */
+            }
+        </style>
 <br>
-<h1>Email Form</h1>
-<br>
+        <h1>Email Form</h1>
 
-<form action="/events/view/" method="post" onsubmit="submitForm()">
-    {% csrf_token %}
-    <br>
-    <h3>You are applying to volunteer for:  {{event.title}} </h3>
+        <form action="/events/view/" method="post" onsubmit="submitForm()">
+            {% csrf_token %}
+            <h3>You are applying to volunteer for: {{event.title}}</h3>
+            <br>
+            <h2>{{event.date}}</h2>
 <br>
-<h2> {{event.date}}</h2>
-    <br>
-    <label>Please enter a valid email address:</label>
-    <br>
-    <br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required style="width: 400px;">
-   
-    <br>
-    <br>
-    <br>
-    <br>
-    <button type="submit">Confirm</button>
-    <br>
-    <br>
-    <br>
-    <br>
-</form>
+            <label for="email">Please enter a valid email address:</label>
+            <br>
+            <input type="email" id="email" name="email" required style="width: 100%; box-sizing: border-box; padding: 8px;">
 
-<footer>
-    <p>&copy; 2023 Givester | Designed by Jacob and Jeffrey</p>
-  </footer>
+            <!-- Added comments section -->
+            <div class="comments-section">
+                <label for="comments">Any comments?</label>
+                <textarea id="comments" name="comments" class="comments-box" placeholder="Write your comments here..."></textarea>
+            </div>
+<br>
+            <button type="submit">Confirm</button>
+        </form>
+
+        <footer>
+            <p>&copy; 2023 Givester | Designed by Jacob and Jeffrey</p>
+        </footer>
+    </div>
 {% endblock %}
-</div>
