@@ -1,12 +1,12 @@
 # Givester
-Mcgill CodeJam 13 - Hackathon project
+**Mcgill CodeJam 13** - Hackathon project
 by Jeffrey Lim and Jacob Lau
 
 ### Inspiration
 In light of recent events and the rise of cost of living, volunteer work is now more important than ever.
 
 ### What it does
-Therefore we wanted to create Givester, a website that will facilitate the sharing of volunteering events . The events page shows a list of events that users can apply to volunteer for, with their emails (which is validated).
+Therefore we wanted to create **Givester**, a website that will facilitate the sharing of volunteering events . The events page shows a list of events that users can apply to volunteer for, with their emails (which is validated).
 
 ### How we built it
 We used Django framework for the structure, and html and css for the web page. Also javascript was used for a pop-up.
