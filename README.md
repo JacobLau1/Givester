@@ -2,6 +2,7 @@
 **Mcgill CodeJam 13** - First Hackathon Project
 by Jeffrey Lim and Jacob Lau
 
+![Alt Text](images/Screen Shot 2023-11-19 at 11.50.03 AM.png)
 
 ### Inspiration
 In light of recent events and the rise of cost of living, volunteer work is now more important than ever.
